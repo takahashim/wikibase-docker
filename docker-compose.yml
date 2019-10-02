@@ -18,7 +18,7 @@ services:
       - mysql
     ports:
     # CONFIG - Change the 8181 here to expose Wikibase & MediaWiki on a different port
-     - "8181:80"
+     - "8188:80"
     volumes:
       - mediawiki-images-data:/var/www/html/images
       - quickstatements-data:/quickstatements/data
@@ -139,7 +139,7 @@ services:
          - quickstatements.svc
     environment:
       - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://localhost:9191
-      - WB_PUBLIC_SCHEME_HOST_AND_PORT=http://localhost:8181
+      - WB_PUBLIC_SCHEME_HOST_AND_PORT=http://localhost:8188
       - WIKIBASE_SCHEME_AND_HOST=http://wikibase.svc
       - WB_PROPERTY_NAMESPACE=122
       - "WB_PROPERTY_PREFIX=Property:"
